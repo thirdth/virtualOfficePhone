@@ -87,6 +87,9 @@ var newApplication =function () {
 };
 
 app.use(express.static('static'));
+app.get('/', function(req, res){
+	res.sendFile(__dirname + '/index.html');
+});
 app.get('/incomingCall', function(req, res) {
 	if(req.query && req.query.eventType && req.query.eventType === 'answer') {
 		res.send(bxml);
