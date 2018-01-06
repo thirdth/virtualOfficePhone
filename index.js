@@ -13,8 +13,6 @@ var client = new bandwidth({
   apiSecret : "k5sih5b3m3evj6k46267cpzk7c3k7pipulimpfi"
 });
 
-
-app.set('port', (process.env.PORT || 5000));
 app.use(express.static('static'));
 app.post('/incomingCall', function(req, res) {
 		client.Call.answer("callID").then(function () {});
