@@ -14,6 +14,6 @@ var client = new bandwidth({
 });
 
 app.use(express.static('static'));
-app.post('/incomingCall', function(req, res) {
+app.get('/incomingCall', function(req, res) {
 		client.Call.answer("callID").then(function () {});
 });
