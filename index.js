@@ -86,9 +86,8 @@ var newApplication =function () {
 		});
 };
 
-app.use(express.static('static'));
 app.get('/', function(req, res){
-	res.sendFile(__dirname + '/index.html');
+	res.send('Hello World!')
 });
 app.get('/incomingCall', function(req, res) {
 	if(req.query && req.query.eventType && req.query.eventType === 'answer') {
