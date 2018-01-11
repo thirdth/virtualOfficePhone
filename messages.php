@@ -9,7 +9,6 @@ $client = new Client($TWsid, $TWtoken);
 
 // Loop over the list of recordings and echo a property for each one
 foreach ($client->recordings->read() as $recording) {
-    $uri = str_replace('json', 'mp3', $recording->uri)
-    echo "<a href='https://api.twilio.com/" . $uri . "'>" . $recording->sid . "</a>";
+    echo "<a href='https://api.twilio.com/2010-04-01/Accounts/". $TWsid . "/Recordings/" . $recording->uri . "'>" . $recording->sid . "</a>";
 }
 ?>
