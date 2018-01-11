@@ -18,6 +18,7 @@ $client = new Client($TWsid, $TWtoken);
 foreach ($client->calls->read() as $call) {
   print_r($call);
   echo "<div>
+          <p>" . $call->direction . "</p>
           <a href='https://api.twilio.com/2010-04-01/Accounts/". $TWsid . "/Recordings/" . $call->sid . ".mp3'>" . $call->from . "</a>
         </div>";
 }
