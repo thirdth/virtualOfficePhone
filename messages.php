@@ -8,10 +8,14 @@ use Twilio\Rest\Client;
 $client = new Client($TWsid, $TWtoken);
 
 // Loop over the list of recordings and echo a property for each one
-foreach ($client->recordings->read() as $recording) {
+/*foreach ($client->recordings->read() as $recording) {
     print_r($recording);
     echo "<div>
             <a href='https://api.twilio.com/2010-04-01/Accounts/". $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>
           </div>";
+}*/
+
+foreach ($client->calls->read() as $call) {
+  print_r($call);
 }
 ?>
