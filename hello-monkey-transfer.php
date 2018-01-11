@@ -12,5 +12,7 @@
 ?>
 <Response>
     <Dial>+16159457818</Dial>
-    <Say>The call failed or the remote party hung up. Goodbye.</Say>
+    <Say>Tech for lawyers is not available, please leave a message.</Say>
+    <Record maxLength="30" action="hello-monkey-handle-recording.php" />
+    <Say>Goodbye</Say>
 </Response>
