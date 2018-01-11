@@ -1,6 +1,6 @@
 <?php
 // Get the PHP helper library from https://twilio.com/docs/libraries/php
-require_once '/../config/config.php'
+require_once '/../config/config.php';
 require_once $_SERVER[DOCUMENT_ROOT] . '/SDK/twilio-php-master/Twilio/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
