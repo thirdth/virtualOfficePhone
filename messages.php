@@ -6,10 +6,11 @@ use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/user/account
 $client = new Client($TWsid, $TWtoken);
+print_r($client);
 
 // Loop over the list of recordings and echo a property for each one
 foreach ($client->recordings->read() as $recording) {
-    print_r($recording[0]);
+    print_r($recording);
     echo "<div>
             <a href='https://api.twilio.com/2010-04-01/Accounts/". $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>
           </div>";
