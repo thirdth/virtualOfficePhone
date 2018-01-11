@@ -5,7 +5,7 @@ require_once 'SDK/twilio-php-master/Twilio/autoload.php'; // Loads the library
 use Twilio\Rest\Client;
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$client = new Client($sid, $token);
+$client = new Client($TWsid, $TWtoken);
 
 // Loop over the list of recordings and echo a property for each one
 foreach ($client->recordings->read() as $recording) {
