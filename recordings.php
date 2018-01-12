@@ -16,6 +16,7 @@ $recordings = $client->recordings->read(
     )
 );
 
+print_r($recordings);
 // Loop over the list of recordings and echo a property for each one
 foreach ($recordings as $recording) {
     echo $recording;
