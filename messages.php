@@ -22,7 +22,7 @@ foreach ($client->calls->read() as $call) {
   echo "  |  ";
   print_r($call->recordings->read());
   echo "<div>
-          <p>" . $call->direction . " | " . $call->startTime->date . "</p>
+          <p>" . $call->direction . " | " . $call->startTime->date . " | " . $call->from . "</p>
           <a href='recordings.php?callSid=" . $call->sid . "'>" . $call->sid . "</a>
         </div>";
 }
