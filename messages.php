@@ -16,7 +16,7 @@ $client = new Client($TWsid, $TWtoken);
 }*/
 
 foreach ($client->calls->read() as $call) {
-  print_r($call);
+  print_r($call->recordings);
   echo "<div>
           <p>" . $call->direction . " | " . $call->startTime->date . "</p>
           <a href='recordings.php?callSid=" . $call->sid . "'>" . $call->sid . "</a>
