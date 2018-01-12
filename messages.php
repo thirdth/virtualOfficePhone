@@ -19,7 +19,7 @@ foreach ($client->calls->read() as $call) {
   print_r($call);
   echo "<div>
           <p>" . $call->direction . " | " . $call->startTime->date . "</p>
-          <a href='https://tel.tech4lawyers.com/recordings.php?callSid=" . $call->sid . "'>" . $call->sid . "</a>
+          <a href='tel.tech4lawyers.com/recordings.php?callSid=" . $call->sid . "'>" . $call->sid . "</a>
         </div>";
 }
 ?>
