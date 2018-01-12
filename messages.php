@@ -19,7 +19,7 @@ foreach ($client->calls->read() as $call) {
   print_r($call);
   echo "<div>
           <p>" . $call->direction . " | " . $call->startTime->date . "</p>
-          <a href='https://api.twilio.com/2010-04-01/Accounts/". $TWsid . "/Calls/" . $call->sid . ">" . $call->from . "</a>
+          <a href='https://api.twilio.com/2010-04-01/Accounts/". $TWsid . "/Calls/" . $call->sid . "'>" . $call->from . "</a>
         </div>";
 }
 ?>
