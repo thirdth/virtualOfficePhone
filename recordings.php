@@ -8,6 +8,8 @@ use Twilio\Rest\Client;
 $callSid= $_GET['callSid'];
 $client = new Client($TWsid, $TWtoken);
 
+echo $callSid;
+
 $recordings = $client->recordings->read(
     array(
         "callSid" => $callSid,
@@ -18,3 +20,5 @@ $recordings = $client->recordings->read(
 foreach ($recordings as $recording) {
     echo $recording;
 }
+
+?>
