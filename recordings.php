@@ -20,7 +20,7 @@ $recordings = $client->recordings->read(
 // Loop over the list of recordings and echo a property for each one
 foreach ($recordings as $recording) {
     echo "<div>
-            <a href='https://tel.tech4lawyers.com/2010-04-01/Accounts" . $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>
+            <a href='https://api.twilio.com/2010-04-01/Accounts" . $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>
           </div>";
 }
 
