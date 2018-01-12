@@ -16,7 +16,7 @@ $recordings = $client->recordings->read(
     )
 );
 
-print_r($client->recordings);
+print_r($client->recordings->callSid);
 // Loop over the list of recordings and echo a property for each one
 foreach ($recordings as $recording) {
     echo $recording;
