@@ -21,13 +21,14 @@ foreach ($client->calls->read() as $call) {
   print_r($call->recordings);
   echo "  |  ";*/
   print_r($call->recordings->read());
+  print_r($call->recordings->properites);
   echo "<div>
           <p>" . $call->direction . " | " . $call->startTime->date . " | " . $call->from . "</p>
           <a href='recordings.php?callSid=" . $call->sid . "'>Call SID: " . $call->sid . "</a>
         </div>";
   if (!empty($call->recordings->read())) {
     $recording = $call->recordings->read();
-    echo "<a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>Recording SID: " . $recording->properties->sid . "</a>";
+    echo "<a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>Recording SID: " . $recording->sid . "</a>";
   }
 }
 ?>
