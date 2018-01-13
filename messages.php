@@ -19,8 +19,8 @@ foreach ($client->calls->read() as $call) {
   /*print_r($call);
   echo "  |  ";
   print_r($call->recordings);
-  echo "  |  ";*/
-  print_r($call->recordings->read());
+  echo "  |  ";
+  print_r($call->recordings->read());*/
   echo " \ ";
   print_r($call->recordings->properties);
   echo "<div>
