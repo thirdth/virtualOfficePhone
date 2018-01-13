@@ -27,7 +27,7 @@ foreach ($client->calls->read() as $call) {
         </div>";
   if ($call->recordings->read()) {
     $recording = $call->recordings->read();
-    echo "<a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>;
+    echo "<a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>";
   }
 }
 ?>
