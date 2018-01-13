@@ -16,16 +16,16 @@ $client = new Client($TWsid, $TWtoken);
 }*/
 
 foreach ($client->calls->read() as $call) {
-  print_r($call);
+  /*print_r($call);
   echo "  |  ";
   print_r($call->recordings);
-  echo "  |  ";
+  echo "  |  ";*/
   print_r($call->recordings->read());
   echo "<div>
           <p>" . $call->direction . " | " . $call->startTime->date . " | " . $call->from . "</p>
           <a href='recordings.php?callSid=" . $call->sid . "'>Call SID: " . $call->sid . "</a>
         </div>";
-  if (empty($call->recordings->read())) {
+  if (!empty($call->recordings->read())) {
     $recording = $call->recordings->read();
     echo "<a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>Recording SID: " . $recording->sid . "</a>";
   }
