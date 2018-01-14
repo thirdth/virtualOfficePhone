@@ -18,7 +18,7 @@ $client = new Client($TWsid, $TWtoken);
 foreach ($client->calls->read() as $call) {
   var_dump($call);
   echo "  |  \n";
-  print_r($call->properties);
+  print_r($call->version->properties);
   echo "  |  \n";
   print_r($call->recordings->read());
   echo "\n<div>
